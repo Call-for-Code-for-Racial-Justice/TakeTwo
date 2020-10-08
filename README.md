@@ -88,7 +88,7 @@ There is a front-end HTML page that serves and example text editor.
 
 This API (highlighted in the following diagram) is part of the Call For Code TakeTwo Project. This API is used to capture the data highlighted by users through the TakeTwo Chrome extension tool.
 
-![](images/architecture-highlighted.png)
+![](images/architecture-overview.png)
 
 </br>
 
