@@ -80,7 +80,7 @@ This API is underpinned by a crowd-sourced database of words and phrases that ar
 
 There are a number of other repositories related to this project:
 
-- [TakeTwo Data Science](https://github.com/embrace-call-for-code/taketwo-datascience) - Contains data science work for building and training the model.
+- [TakeTwo Data Science](datascience/README.md) - Contains data science work for building and training the model.
 - [TakeTwo Marker Chrome Extenstion](https://github.com/embrace-call-for-code/taketwo-marker-chromeextension) - Code for the Chrome extension used to crowdsource data for training the ML model.
 
 
@@ -123,7 +123,7 @@ This project has defined a number of data scheme categories of racial bias, whic
 
 The Web API is build in Python and handles the following:
 - Capture the data crowdsourced by contributors through the [TakeTwo Chrome extension tool](https://github.com/embrace-call-for-code/taketwo-marker-chromeextension).
-- Capture the data highlighted by contributors and posts it to a backend database. Separately, this data will be used to train an [ML model](https://github.com/embrace-call-for-code/taketwo-datascience) that can detect racial bias.
+- Capture the data highlighted by contributors and posts it to a backend database. Separately, this data will be used to train a [ML model](datascience/README.md) that can detect racial bias.
 - Fetch the defined categories of racial bias and serve them in the extension tool.
 
 [Follow these instructions for setting up the web back end API](webapi/README.md)
