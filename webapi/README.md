@@ -57,13 +57,13 @@ There is a front-end HTML page that serves and example text editor.
 
 This API (highlighted in the following diagram) is part of the Call For Code TakeTwo Project. This API is used to capture the data highlighted by users through the TakeTwo Chrome extension tool.
 
-![](images/architecture-highlighted.png)
+![](/images/architecture-highlighted.png)
 
 </br>
 
 ### Description of TakeTwo API
 
-This API is part of the Call For Code TakeTwo project. This API is used to capture the data crowdsourced by our contributors through the [Take 2 Chrome extension tool](https://github.com/embrace-call-for-code/taketwo-marker-chromeextension).
+This API is part of the Call For Code TakeTwo project. This API is used to capture the data crowdsourced by our contributors through the [TakeTwo Chrome extension tool](/chromeextension/README.md).
 
 The API is used to fetch the defined categories of racial bias and serve them in the extension tool. It also captures the data highlighted by contributors and posts it to a backend database. This data is used to train an [ML model](/datascience/README.md) that can detect racial bias.
 
@@ -91,7 +91,7 @@ This project has defined a number of categories of racial bias, which are used b
 - Racial Slur
 - Othering
 
-Definitions of these categories can be found on the TakeTwo [webpage](README.md).
+Definitions of these categories can be found on the TakeTwo [webpage](/README.md).
 
 </br>
 
@@ -174,7 +174,7 @@ For an overview of the available endpoints navigate to [http://localhost:8000/do
 
 ## Related Links
 
-There are a number of other repositories related to this project:
+There are a number of other components related to this project:
 
-- [TakeTwo Data Science](https://github.com/embrace-call-for-code/taketwo-datascience) - Contains data science work for building and training the model.
-- [TakeTwo Marker Chrome Extenstion](https://github.com/embrace-call-for-code/taketwo-marker-chromeextension) - Code for the Chrome extension used to crowdsource data for training the ML model.
+- [TakeTwo Data Science](/datascience/README.md) - Contains data science work for building and training the model.
+- [TakeTwo Marker Chrome Extenstion](/chromeextension/README.md) - Code for the Chrome extension used to crowdsource data for training the ML model.

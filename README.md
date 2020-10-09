@@ -81,7 +81,7 @@ This API is underpinned by a crowd-sourced database of words and phrases that ar
 There are a number of other repositories related to this project:
 
 - [TakeTwo Data Science](datascience/README.md) - Contains data science work for building and training the model.
-- [TakeTwo Marker Chrome Extenstion](https://github.com/embrace-call-for-code/taketwo-marker-chromeextension) - Code for the Chrome extension used to crowdsource data for training the ML model.
+- [TakeTwo Marker Chrome Extenstion](chromeextension/README.md) - Code for the Chrome extension used to crowdsource data for training the ML model.
 
 
 ## Technology
@@ -122,7 +122,7 @@ This project has defined a number of data scheme categories of racial bias, whic
 #### TakeTwo Web Backend API
 
 The Web API is build in Python and handles the following:
-- Capture the data crowdsourced by contributors through the [TakeTwo Chrome extension tool](https://github.com/embrace-call-for-code/taketwo-marker-chromeextension).
+- Capture the data crowdsourced by contributors through the [TakeTwo Chrome extension tool](chromeextension/README.md).
 - Capture the data highlighted by contributors and posts it to a backend database. Separately, this data will be used to train a [ML model](datascience/README.md) that can detect racial bias.
 - Fetch the defined categories of racial bias and serve them in the extension tool.
 
@@ -138,7 +138,7 @@ This extension is used to enable the crowdsourcing of data for use in training a
 
 #### TakeTwo Data Science
 
-The TakeTwo Data Science workstream uses data crowdsourced by a [Chrome extension](https://github.com/embrace-call-for-code/taketwo-marker-chromeextension) and sent to a [backend database](webapi/README.md).
+The TakeTwo Data Science workstream uses data crowdsourced by a [Chrome extension](chromeextension/README.md) and sent to a [backend database](webapi/README.md).
 
 The machine learning model code is written in Python and runs in a Jupyter notebook.
 

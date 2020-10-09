@@ -1,6 +1,6 @@
 # TakeTwo Solution Starter - Data Science
 
-The Call for Code for Racial Justice TakeTwo machine learning and datascience component uses data crowdsourced by a [Chrome extension](/https://github.com/embrace-call-for-code/taketwo-marker-chromeextension) and sent to a [backend database](/webapi/README.md).
+The Call for Code for Racial Justice TakeTwo machine learning and datascience component uses data crowdsourced by a [Chrome extension](/chromeextension/README.md) and sent to a [backend database](/webapi/README.md).
 
 ![](/images/architecture-overview.png)
 
