@@ -1,4 +1,4 @@
-# TakeTwo Solution Starter - Data Science
+# TakeTwo Solution Starter - Chrome Extension
 
 The TakeTwo Chrome browser extension is a plugin to facilitate the capture and categorization words and phrases that could be racially biased through a browser. The words and phrases can be categorized.
 
@@ -8,7 +8,7 @@ This extension is used to enable the crowdsourcing of data for use in training a
 
 ### TakeTwo Architecture
 
-This Chrome extension  is part of the Call For Code TakeTwo Project. This extension is used to enable the crowdsourcing of data for use in training an ML model. This extension aims to make it as easy as possible for community members who would like to contribute to this initiative to do so quickly and privately.
+This Chrome extension is part of the Call For Code TakeTwo Project. This extension is used to enable the crowdsourcing of data for use in training an ML model. This extension aims to make it as easy as possible for community members who would like to contribute to this initiative to do so quickly and privately.
 
 ![](/images/architecture-overview.png)
 
@@ -53,8 +53,7 @@ The following steps will explain how to get started with this extension.
 
 ### 1. Install the TakeTwo chrome extension
 
-You will need the chrome browser, which can be installed [here](https://www.google.co.uk/chrome/?brand=CHBD&gclid=Cj0KCQjwjer4BRCZARIsABK4QeVAQkotXkLJlBvJS2V7R2q9__Gk3PchSyhorcBNAZXx7JJwbDeRrBYaAk3TEALw_wcB&gclsrc=aw.ds).
-
+You will need the chrome browser, which can be installed [here](https://www.google.com/chrome/).
 
 - Clone this git repo.
 - In order to install the chrome plugin, navigate to `chrome://extensions` and then select the **load unpacked** option.
