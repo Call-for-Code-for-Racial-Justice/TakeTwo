@@ -1,6 +1,8 @@
 # TakeTwo Solution Starter
 TakeTwo provides a quick and simple tool to help detect and eliminate racial bias -- both overt and subtle -- in written content. This can assist content creators in proactively mitigating potential biases as they write. It can also be used by people to review written content on websites and social media for potential biases.
 
+TakeTwo detects phrases and words that could be seen as racially biased as you are developing content and helps you take responsibility for what you say.
+
 ## Contents
 
 1. [Overview](#overview)
@@ -64,7 +66,17 @@ The TakeTwo solution provides a quick and simple tool for **content platforms** 
 
 ## How it Works
 
-This API is underpinned by a crowd-sourced database of words and phrases that are deemed racially biased. These phrases are categorized in order to train an AI model on the significance of the context in which the language was used. Contributors to the project can be part of the crowdsourcing process by installing a browser extension. This API repo is part of the data capture process, which is used for modelling.
+### What is TakeTwo?
+TakeTwo is an API that can be used in your development of text content or code to scan for potentially racially biased language. The API works by flagging and classifying phrases and words that have a tendency of being perceived as racially biased within the United States. See the [categories for commonly detectable types of racially biased language](#datasets) below.
+
+### How does TakeTwo work?
+TakeTwo leverages a crowd-sourced database of words and phrases that could be viewed as racially biased in the US. Verified, trusted contributors can use TakeTwo's browser extension to select potentially biased language in text-based media. These selections are classified under commonly detected types of racially biased language to train TakeTwo's text-classification machine learning model.  
+
+TakeTwo's machine learning model is used to help identify subtle, context-dependent phrases or words that may be perceived as racially biased in the United States.
+
+Users of the API and browser extension can provide feedback on the value of the recommendations provided so that the AI model can be steadily improved and refined over-time.
+
+This API is underpinned by a crowd-sourced database of words and phrases that are deemed racially biased. These phrases are categorized in order to train an AI model on the significance of the context in which the language was used. Contributors to the project can be part of the crowdsourcing process by installing a browser extension. This API repo is part of the data capture process, which is used for modeling.
 
 There are a number of other repositories related to this project:
 
@@ -76,7 +88,7 @@ There are a number of other repositories related to this project:
 
 TakeTwo is built using open source technologies. The API is built using Python, [FastAPI](https://fastapi.tiangolo.com/), and [Docker](https://www.docker.com) (if running on a Kubernetes cluster).
 
-The data is sent to a backend database. The code is set up to be able to run the API locally with a [CouchDB](https://couchdb.apache.org/) backend database or [IBM Cloudant](https://www.ibm.com/uk-en/cloud/cloudant) database.
+The data is sent to a backend database. The code is set up to be able to run the API locally with a [CouchDB](https://couchdb.apache.org/) backend database or [IBM Cloudant](https://www.ibm.com/cloud/cloudant) database.
 
 To run with CouchDB, you will need to deploy a CouchDB docker image either locally or on a Kubernetes cluster.
 
@@ -94,27 +106,23 @@ This API (highlighted in the following diagram) is part of the Call For Code Tak
 
 ## Datasets
 
-This project has defined a number of categories of racial bias, which are used by a text classification model (outlined below), however we welcome feedback on these:
+This project has defined a number of data scheme categories of racial bias, which are used by a text classification model (outlined below), however we welcome feedback on these categories.
 
-- Appropriation
-- Stereotyping
-- Under-Representation
-- Gaslighting
-- Racial Slur
-- Othering
+#### Common types of detectable racially biased language
 
-Definitions of these categories can be found on the TakeTwo webpage.
-
-</br>
+- Appropriation - **Definition:** To adopt or claim elements of one or more cultures to which you do not belong, consequently causing offence to members of said culture(s) or otherwise achieving some sort of personal gain at the expense of other members of the culture(s).
+- Stereotyping - **Definition:** To perpetuate a system of beliefs about superficial characteristics of members of a given ethnic group or nationality, their status, society and cultural norms.
+- Under-Representation - **Definition:** To have insufficient or disproportionately low representation of Black, Indigenous, People of Color (BIPOC) individuals, for example in mediums such as media and TV adverts.
+- Gaslighting - **Definition:** To use tactics, whether by a person or entity, in order to gain more power by making a victim question their reality.  To deny or refuse to see racial bias, which may also include the act of convincing a person that an event, slur, or idea is not racist or not as bad as one claims it to be through means of psychological manipulation.
+- Racial Slur - **Definition:** To insult, or use offensive or hurtful language designed to degrade a person because of their race or culture. This is intentional use of words or phrases to speak of or to members of ethnic groups in a derogatory manor.
+- Othering - **Definition:** To label and define a person or group as someone who belongs to a "socially subordinate" category of society. The practice of othering persons means to use the characteristics of a person's race to exclude and displace such person from the 'superior' social group and separate them from what is classed as normal.
 
 ## Getting started
-
-#### Prerequisites
 
 #### TakeTwo Web Backend API
 
 The Web API is build in Python and handles the following:
-- Capture the data crowdsourced by our contributors through the [Take 2 Chrome extension tool](https://github.com/embrace-call-for-code/taketwo-marker-chromeextension).
+- Capture the data crowdsourced by contributors through the [TakeTwo Chrome extension tool](https://github.com/embrace-call-for-code/taketwo-marker-chromeextension).
 - Capture the data highlighted by contributors and posts it to a backend database. Separately, this data will be used to train an [ML model](https://github.com/embrace-call-for-code/taketwo-datascience) that can detect racial bias.
 - Fetch the defined categories of racial bias and serve them in the extension tool.
 
@@ -122,7 +130,17 @@ The Web API is build in Python and handles the following:
 
 #### TakeTwo Browser Extension
 
+The TakeTwo Chrome javascript extension uses the [Highlighter chrome extension](https://github.com/jeromepl/highlighter) library as a basis in order to allow the highlighter functionality for selecting text.
+
+The TakeTwo Chrome browser extension is a plugin to facilitate the capture and categorization words and phrases that could be racially biased through a browser. The words and phrases can be categorized.
+
+This extension is used to enable the crowdsourcing of data for use in training an ML model. This extension aims to make it as easy as possible for community members who would like to contribute to this initiative to do so quickly and privately.
+
 #### TakeTwo Data Science
+
+The TakeTwo Data Science workstream uses data crowdsourced by a [Chrome extension](https://github.com/embrace-call-for-code/taketwo-marker-chromeextension) and sent to a [backend database](webapi/README.md).
+
+The machine learning model code is written in Python and runs in a Jupyter notebook.
 
 ### Contributing
 
