@@ -142,6 +142,8 @@ The TakeTwo Data Science workstream uses data crowdsourced by a [Chrome extensio
 
 The machine learning model code is written in Python and runs in a Jupyter notebook.
 
+[Follow these instructions for building a machine learning model to predict whether a word or phrase contains racial bias](datascience/README.md)
+
 ### Contributing
 
 We welcome contributions! For details on how to contributing please read the [CONTRIBUTING](CONTRIBUTING.md) file in this repo.

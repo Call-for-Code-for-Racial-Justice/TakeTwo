@@ -1,4 +1,4 @@
-# TakeTwo Solution Starter
+# TakeTwo Solution Starter - WebAPI Backend
 
 TakeTwo provides a quick and simple tool to help detect and eliminate racial bias -- both overt and subtle -- in written content. This can assist content creators in proactively mitigating potential biases as they write. It can also be used by people to review written content on websites and social media for potential biases.
 
@@ -65,7 +65,7 @@ This API (highlighted in the following diagram) is part of the Call For Code Tak
 
 This API is part of the Call For Code TakeTwo project. This API is used to capture the data crowdsourced by our contributors through the [Take 2 Chrome extension tool](https://github.com/embrace-call-for-code/taketwo-marker-chromeextension).
 
-The API is used to fetch the defined categories of racial bias and serve them in the extension tool. It also captures the data highlighted by contributors and posts it to a backend database. This data is used to train an [ML model](https://github.com/embrace-call-for-code/taketwo-datascience) that can detect racial bias.
+The API is used to fetch the defined categories of racial bias and serve them in the extension tool. It also captures the data highlighted by contributors and posts it to a backend database. This data is used to train an [ML model](/datascience/README.md) that can detect racial bias.
 
 ## Datasets
 
