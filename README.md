@@ -67,7 +67,7 @@ The TakeTwo solution provides a quick and simple tool for **content platforms** 
 ## How it Works
 
 ### What is TakeTwo?
-TakeTwo is an API that can be used in your development of text content or code to scan for potentially racially biased language. The API works by flagging and classifying phrases and words that have a tendency of being perceived as racially biased within the United States. See the [categories for commonly detectable types of racially biased language](#datasets) below.
+TakeTwo is an API that can be used while you compose social media text, paragraphs, essays and papers. TakeTwo will scan for potentially racially biased language. The API works by flagging and classifying phrases and words that have a tendency of being perceived as racially biased within the United States. See the [categories for commonly detectable types of racially biased language](#datasets) below.
 
 ### How does TakeTwo work?
 TakeTwo leverages a crowd-sourced database of words and phrases that could be viewed as racially biased in the US. Verified, trusted contributors can use TakeTwo's browser extension to select potentially biased language in text-based media. These selections are classified under commonly detected types of racially biased language to train TakeTwo's text-classification machine learning model.  
@@ -80,6 +80,7 @@ This API is underpinned by a crowd-sourced database of words and phrases that ar
 
 There are a number of other repositories related to this project:
 
+- [TakeTwo Web API](webapi/README.md) - Contains the Python app, FastAPI and database schema.
 - [TakeTwo Data Science](datascience/README.md) - Contains data science work for building and training the model.
 - [TakeTwo Marker Chrome Extenstion](chromeextension/README.md) - Code for the Chrome extension used to crowdsource data for training the ML model.
 
@@ -88,7 +89,7 @@ There are a number of other repositories related to this project:
 
 TakeTwo is built using open source technologies. The API is built using Python, [FastAPI](https://fastapi.tiangolo.com/), and [Docker](https://www.docker.com) (if running on a Kubernetes cluster).
 
-The data is sent to a backend database. The code is set up to be able to run the API locally with a [CouchDB](https://couchdb.apache.org/) backend database or [IBM Cloudant](https://www.ibm.com/cloud/cloudant) database.
+The racially biased terms are vetted and loaded into a backend database. The code is set up to be able to run the API locally within a [CouchDB](https://couchdb.apache.org/) backend database or [IBM Cloudant](https://www.ibm.com/cloud/cloudant) database.
 
 To run with CouchDB, you will need to deploy a CouchDB docker image either locally or on a Kubernetes cluster.
 
@@ -98,9 +99,14 @@ There is a front-end HTML page that serves and example text editor.
 
 ### TakeTwo Architecture
 
-This API (highlighted in the following diagram) is part of the Call For Code TakeTwo Project. This API is used to capture the data highlighted by users through the TakeTwo Chrome extension tool.
-
 ![](images/architecture-overview.png)
+
+1. The Chrome extension provides two features - scan and highlight text that could contain racially biased terms, explain to the writer the racial biased categories.
+1. Allows an approved expert to mark text and tag racially biased terms
+1. Submit this information via the Python TakeTwo api
+1. TakeTwo API writes data to the backend database.
+1. ML model reads data from the database to train and refine model.
+1. Client app sends content as a request to the model and model responds by flagging any text that could contain racially biased terms.
 
 </br>
 
@@ -110,12 +116,12 @@ This project has defined a number of data scheme categories of racial bias, whic
 
 #### Common types of detectable racially biased language
 
-- Appropriation - **Definition:** To adopt or claim elements of one or more cultures to which you do not belong, consequently causing offence to members of said culture(s) or otherwise achieving some sort of personal gain at the expense of other members of the culture(s).
-- Stereotyping - **Definition:** To perpetuate a system of beliefs about superficial characteristics of members of a given ethnic group or nationality, their status, society and cultural norms.
-- Under-Representation - **Definition:** To have insufficient or disproportionately low representation of Black, Indigenous, People of Color (BIPOC) individuals, for example in mediums such as media and TV adverts.
-- Gaslighting - **Definition:** To use tactics, whether by a person or entity, in order to gain more power by making a victim question their reality.  To deny or refuse to see racial bias, which may also include the act of convincing a person that an event, slur, or idea is not racist or not as bad as one claims it to be through means of psychological manipulation.
-- Racial Slur - **Definition:** To insult, or use offensive or hurtful language designed to degrade a person because of their race or culture. This is intentional use of words or phrases to speak of or to members of ethnic groups in a derogatory manor.
-- Othering - **Definition:** To label and define a person or group as someone who belongs to a "socially subordinate" category of society. The practice of othering persons means to use the characteristics of a person's race to exclude and displace such person from the 'superior' social group and separate them from what is classed as normal.
+- **Appropriation:** To adopt or claim elements of one or more cultures to which you do not belong, consequently causing offense to members of said culture(s) or otherwise achieving some sort of personal gain at the expense of other members of the culture(s).
+- **Stereotyping:** To perpetuate a system of beliefs about superficial characteristics of members of a given ethnic group or nationality, their status, society and cultural norms.
+- **Under-Representation:** To have insufficient or disproportionately low representation of Black, Indigenous, People of Color (BIPOC) individuals, for example in mediums such as media and TV adverts.
+- **Gaslighting:** To use tactics, whether by a person or entity, in order to gain more power by making a victim question their reality.  To deny or refuse to see racial bias, which may also include the act of convincing a person that an event, slur, or idea is not racist or not as bad as one claims it to be through means of psychological manipulation.
+- **Racial Slur:** To insult, or use offensive or hurtful language designed to degrade a person because of their race or culture. This is intentional use of words or phrases to speak of or to members of ethnic groups in a derogatory manor.
+- **Othering:** To label and define a person or group as someone who belongs to a "socially subordinate" category of society. The practice of othering persons means to use the characteristics of a person's race to exclude and displace such person from the 'superior' social group and separate them from what is classed as normal.
 
 ## Getting started
 
@@ -144,7 +150,7 @@ The machine learning model code is written in Python and runs in a Jupyter noteb
 
 [Follow these instructions for building a machine learning model to predict whether a word or phrase contains racial bias](datascience/README.md)
 
-### Contributing
+## Contributing
 
 We welcome contributions! For details on how to contributing please read the [CONTRIBUTING](CONTRIBUTING.md) file in this repo.
 
