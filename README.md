@@ -91,7 +91,7 @@ The racially biased terms are vetted and loaded into a backend database. The cod
 
 To run with CouchDB, you will need to deploy a CouchDB docker image either locally or on a Kubernetes cluster.
 
-There is a front-end HTML page that serves and example text editor.
+There is a front-end HTML page that serves as an example text editor.
 
 ## Diagrams
 
