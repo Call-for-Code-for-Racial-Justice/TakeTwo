@@ -87,7 +87,7 @@ There are a number of other repositories related to this project:
 
 TakeTwo is built using open source technologies. The API is built using Python, [FastAPI](https://fastapi.tiangolo.com/), and [Docker](https://www.docker.com) (if running on a Kubernetes cluster).
 
-The racially biased terms are vetted and loaded into a backend database. The code is set up to be able to run the API locally within a [CouchDB](https://couchdb.apache.org/) backend database or [IBM Cloudant](https://www.ibm.com/cloud/cloudant) database.
+The racially biased terms are vetted and loaded into a backend database. The code is set up to run the API locally within a [CouchDB](https://couchdb.apache.org/) backend database or [IBM Cloudant](https://www.ibm.com/cloud/cloudant) database.
 
 To run with CouchDB, you will need to deploy a CouchDB docker image either locally or on a Kubernetes cluster.
 
