@@ -15,9 +15,7 @@ TakeTwo provides a quick and simple tool to help detect and eliminate racial bia
 10. [Disclosures](#disclosures)
 11. [License](#license)
 
-![](images/logoblack.png)
-
-[TakeTwo Website](https://w3.ibm.com/w3publisher/take-two)
+![TakeTwo logo](images/logoblack.png)
 
 ## Overview
 
@@ -139,6 +137,8 @@ The TakeTwo Chrome javascript extension uses the [Highlighter chrome extension](
 The TakeTwo Chrome browser extension is a plugin to facilitate the capture and categorization words and phrases that could be racially biased through a browser. The words and phrases can be categorized.
 
 This extension is used to enable the crowdsourcing of data for use in training an ML model. This extension aims to make it as easy as possible for community members who would like to contribute to this initiative to do so quickly and privately.
+
+[Follow these instructions for installing the Chrome Extension](chromeextension/README.md)
 
 #### TakeTwo Data Science
 
