@@ -110,7 +110,7 @@ There is a front-end HTML page that serves and example text editor.
 
 ## Datasets
 
-This project has defined a number of data scheme categories of racial bias, which are used by a text classification model (outlined below), however we welcome feedback on these categories.
+This project has defined a number of data scheme categories of racial bias, which are used by a text classification model (outlined below). We welcome feedback on these categories.
 
 #### Common types of detectable racially biased language
 
