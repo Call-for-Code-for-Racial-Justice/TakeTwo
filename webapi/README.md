@@ -1,12 +1,12 @@
 # TakeTwo Solution Starter - WebAPI Backend
 
-TakeTwo provides a quick and simple tool to help detect and eliminate racial bias -- both overt and subtle -- in written content. This can assist content creators in proactively mitigating potential biases as they write. It can also be used by people to review written content on websites and social media for potential biases.
+TakeTwo provides a quick and simple tool to help detect and eliminate racial bias -- both overt and subtle -- in written content. Using TakeTwo to detect phrases and words that can be seen as racially biased can assist content creators in proactively mitigating potential bias as they write. It can also be used to review written content on websites and social media for potential biases.
 
 ## Introduction
 
 The TakeTwo solution provides a quick and simple tool for **content platforms** to detect and eliminate racial bias (both overt and subtle) from their content.
 
-This API is underpinned by a crowd-sourced database of words and phrases that are deemed racially biased. These phrases are categorized in order to train an AI model on the significance of the context in which the language was used. Contributors to the project can be part of the crowdsourcing process by installing a browser extension. This API repo is part of the data capture process, which is used for modelling.
+This API is underpinned by a crowd-sourced database of words and phrases that are deemed racially biased. These phrases are categorized in order to train an AI model on the significance of the context in which the language was used. Contributors to the project can be part of the crowdsourcing process by installing a browser extension. This API repo is part of the data capture process, which is used for modeling.
 
 1. A media content editor (e.g., audio, gaming, movies, tv, comics, news, publications) can incorporate bias detection and remediation into their creative process to reduce racial bias and improve representation to Gen Z.
 
@@ -26,30 +26,15 @@ This project aims to facilitate **content platforms** to:
 - Become more aware and improve representation in their future content.
 - Become a more inclusive platform.
 
-## Learning objectives
-
-In this tutorial, you will:
-- Learn how to
-
-## Prerequisites
-
-To complete the steps in this tutorial you need:
-- Install Python3
-- Install Docker
-
-## Estimated time
-
-Completing this tutorial should take about 15 minutes.
-
 ## Technology
 
 TakeTwo is built using open source technologies. The API is built using Python, [FastAPI](https://fastapi.tiangolo.com/), and [Docker](https://www.docker.com) (if running on a Kubernetes cluster).
 
-The data is sent to a backend database. The code is set up to be able to run the API locally with a [CouchDB](https://couchdb.apache.org/) backend database or [IBM Cloudant](https://www.ibm.com/uk-en/cloud/cloudant) database.
+The racially biased terms are vetted and loaded into a backend database. The code is set up to run the API locally with a [CouchDB](https://couchdb.apache.org/) backend database or [IBM Cloudant](https://www.ibm.com/uk-en/cloud/cloudant) database.
 
 To run with CouchDB, you will need to deploy a CouchDB docker image either locally or on a Kubernetes cluster.
 
-There is a front-end HTML page that serves and example text editor.
+There is a front-end HTML page that serves as an example text editor.
 
 ## Diagrams
 
@@ -71,18 +56,18 @@ The API is used to fetch the defined categories of racial bias and serve them in
 
 The database contains the following fields:
 
-- ``"_id"``: Database field (optional)
-- ``"_rev"``: Database field
+- ``"_id"``: *Database field* (optional)
+- ``"_rev"``: *Database field*
 - ``"user_id"``: *The user ID*
-- ``"flagged_string"``: *The word of phrase that has been highlighted by the user.*
+- ``"flagged_string"``: *The word or phrase that has been highlighted by the user.*
 - ``"category"``: *The category that has been selected for the type of racial bias present in the highlighted word or phrase.*
-- ``"info"``: *Additional information, context description provided by the user.* (optional)
+- ``"info"``: *Additional information; context description provided by the user.* (optional)
 - ``"url"``: *The url from where the word or phrase was highlighted.*
 
 
 </br>
 
-This project has defined a number of categories of racial bias, which are used by a text classification model (outlined below), however we welcome feedback on these:
+This project has defined a number of categories of racial bias, which are used by a text classification model (outlined below). We welcome feedback on these:
 
 - Appropriation
 - Stereotyping
@@ -95,11 +80,31 @@ Definitions of these categories can be found on the TakeTwo [webpage](/README.md
 
 </br>
 
+## Learning objectives
+
+In this tutorial, you will learn how to:
+- Clone the TakeTwo repository.
+- Install the Python prerequisites.
+- Start a CouchDB container.
+- Launch the application.
+- Deploy to Kubernetes.
+- Use the API.
+
+## Prerequisites
+
+To complete the steps in this tutorial you need:
+- Install Python3
+- Install Docker
+
+## Estimated time
+
+Completing this tutorial should take about 15 minutes.
+
 ## Getting started
 
 #### Clone the TakeTwo repository
 
-To run this API locally you will need to clone this repo.
+To run this API locally you will need to clone this repo:
 
 ```git clone https://github.com/embrace-call-for-code/taketwo.git```
 
@@ -126,11 +131,11 @@ Navigate to the folder which contains the API code:
 ```cd taketwo-webapi```
 
 #### Start a CouchDB container
-Before launching the application, set the name of your CouchDB database.
+Before launching the application, set the name of your CouchDB database:
 
 ```export DBNAME=taketwodatabase```
 
-To run the API with a CouchDB backend, start a couchDB container before running the main.py code.
+To run the API with a CouchDB backend, start a couchDB container before running the main.py code:
 
 ```docker run -p 5984:5984 -d -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password couchdb```
 
@@ -142,9 +147,11 @@ Run the Python api code:
 
 </br>
 
-### Deploy to Kubernetes
+## Deploy to Kubernetes
 
-There is already an [image](https://hub.docker.com/repository/docker/josiemundi/taketwo_v0.1) available in Docker hub for this API, which you can use to deploy to a Kubernetes cluster. Alternatively you can build your own using the Dockerfile in this repo. To build a new image, run the following command in a terminal window:
+There is already an [image](https://hub.docker.com/repository/docker/josiemundi/taketwo_v0.1) available in Docker hub for this API, which you can use to deploy to a Kubernetes cluster. Alternatively, you can build your own using the Dockerfile in this repo. 
+
+To build a new image, run the following command in a terminal window:
 
 ```docker build -t <dockerusername>/taketwo_api .```
 
@@ -154,9 +161,9 @@ To push the image to Docker hub, run the following:
 
 </br>
 
-### Use the API
+## Use the API
 
-When the API is running, the main url will show an example text editor, which can be used to make requests to the backend data. You can type in the text box and then press check. Text that could be racially biased will be highlighted as shown in the following example.
+When the API is running, the main url will show an example text editor which can be used to make requests to the backend data. You can type in the text box and then press check. Text that could be racially biased will be highlighted as shown in the following example.
 
 Open a browser to [http://localhost:8000](http://localhost:8000)
 
@@ -164,9 +171,9 @@ Open a browser to [http://localhost:8000](http://localhost:8000)
 
 ![](images/api-example.png)
 
-### Review the TakeTwo OpenAPI documentation
+## Review the TakeTwo OpenAPI documentation
 
-For an overview of the available endpoints navigate to [http://localhost:8000/docs](http://localhost:8000/docs)
+For an overview of the available endpoints, navigate to [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ![TakeTwo Swagger Doc](images/api-swaggerdoc.png)
 

@@ -85,11 +85,11 @@ There are a number of other repositories related to this project:
 
 TakeTwo is built using open source technologies. The API is built using Python, [FastAPI](https://fastapi.tiangolo.com/), and [Docker](https://www.docker.com) (if running on a Kubernetes cluster).
 
-The racially biased terms are vetted and loaded into a backend database. The code is set up to be able to run the API locally within a [CouchDB](https://couchdb.apache.org/) backend database or [IBM Cloudant](https://www.ibm.com/cloud/cloudant) database.
+The racially biased terms are vetted and loaded into a backend database. The code is set up to run the API locally with a [CouchDB](https://couchdb.apache.org/) backend database or [IBM Cloudant](https://www.ibm.com/cloud/cloudant) database.
 
 To run with CouchDB, you will need to deploy a CouchDB docker image either locally or on a Kubernetes cluster.
 
-There is a front-end HTML page that serves and example text editor.
+There is a front-end HTML page that serves as an example text editor.
 
 ## Diagrams
 
@@ -108,7 +108,7 @@ There is a front-end HTML page that serves and example text editor.
 
 ## Datasets
 
-This project has defined a number of data scheme categories of racial bias, which are used by a text classification model (outlined below), however we welcome feedback on these categories.
+This project has defined a number of data scheme categories of racial bias, which are used by a text classification model (outlined below). We welcome feedback on these categories.
 
 #### Common types of detectable racially biased language
 
@@ -132,7 +132,7 @@ The Web API is built in Python and handles the following:
 
 #### TakeTwo Browser Extension
 
-The TakeTwo Chrome javascript extension uses the [Highlighter chrome extension](https://github.com/jeromepl/highlighter) library in order to allow the highlighter functionality for selecting text.
+The TakeTwo Chrome javascript extension uses the [Highlighter chrome extension](https://github.com/jeromepl/highlighter) library to allow the highlighter functionality for selecting text.
 
 The TakeTwo Chrome browser extension is a plugin to facilitate the capture and categorization words and phrases that could be racially biased through a browser. The words and phrases can be categorized.
 
