@@ -1,34 +1,6 @@
 # TakeTwo Solution Starter - WebAPI Backend
 
-TakeTwo provides a quick and simple tool to help detect and eliminate racial bias -- both overt and subtle -- in written content. Using TakeTwo to detect phrases and words that can be seen as racially biased can assist content creators in proactively mitigating potential bias as they write. It can also be used to review written content on websites and social media for potential biases.
-
-## Introduction
-
-The TakeTwo solution provides a quick and simple tool for **content platforms** to detect and eliminate racial bias (both overt and subtle) from their content.
-
-This API is underpinned by a crowd-sourced database of words and phrases that are deemed racially biased. These phrases are categorized in order to train an AI model on the significance of the context in which the language was used. Contributors to the project can be part of the crowdsourcing process by installing a browser extension. This API repo is part of the data capture process, which is used for modeling.
-
-1. A media content editor (e.g., audio, gaming, movies, tv, comics, news, publications) can incorporate bias detection and remediation into their creative process to reduce racial bias and improve representation to Gen Z.
-
-2. A social media user can understand the historical and societal context of racial bias and cultural appropriation reflected in their posts in real time.
-
-We have identified the following issues currently faced by **content platforms**:
-
-- Racially biased content created due to lack of context and information.
-- The possibility to perpetuate bias through content.
-- Offensive and hurtful language that can cause others pain.
-
-This project aims to facilitate **content platforms** to:
-
-- Flag words and phrases that may contain racial bias.
-- Categorize the type of racial bias that may be present.
-- Amend text to reduce the possibility of posting offensive content.
-- Become more aware and improve representation in their future content.
-- Become a more inclusive platform.
-
-## Technology
-
-TakeTwo is built using open source technologies. The API is built using Python, [FastAPI](https://fastapi.tiangolo.com/), and [Docker](https://www.docker.com) (if running on a Kubernetes cluster).
+The TakeTwo Web API can be used while you compose social media text, paragraphs, essays and papers. TakeTwo will scan for potentially racially biased language. The API is built using Python, [FastAPI](https://fastapi.tiangolo.com/), and [Docker](https://www.docker.com) (if running on a Kubernetes cluster).
 
 The racially biased terms are vetted and loaded into a backend database. The code is set up to run the API locally with a [CouchDB](https://couchdb.apache.org/) backend database or [IBM Cloudant](https://www.ibm.com/uk-en/cloud/cloudant) database.
 
@@ -40,7 +12,7 @@ There is a front-end HTML page that serves as an example text editor.
 
 ### TakeTwo Architecture
 
-This API (highlighted in the following diagram) is part of the Call For Code TakeTwo Project. This API is used to capture the data highlighted by users through the TakeTwo Chrome extension tool.
+This API (highlighted in the following diagram) is part of the Call for Code for Racial Justice TakeTwo Project. This API is used to capture the data highlighted by users through the TakeTwo Chrome extension tool.
 
 ![](/images/architecture-highlighted.png)
 
@@ -48,7 +20,7 @@ This API (highlighted in the following diagram) is part of the Call For Code Tak
 
 ### Description of TakeTwo API
 
-This API is part of the Call For Code TakeTwo project. This API is used to capture the data crowdsourced by our contributors through the [TakeTwo Chrome extension tool](/chromeextension/README.md).
+This API is part of the Call for Code for Racial Justice TakeTwo project. This API is used to capture the data crowdsourced by our contributors through the [TakeTwo Chrome extension tool](/chromeextension/README.md).
 
 The API is used to fetch the defined categories of racial bias and serve them in the extension tool. It also captures the data highlighted by contributors and posts it to a backend database. This data is used to train an [ML model](/datascience/README.md) that can detect racial bias.
 
@@ -131,6 +103,7 @@ Navigate to the folder which contains the API code:
 ```cd taketwo-webapi```
 
 #### Start a CouchDB container
+
 Before launching the application, set the name of your CouchDB database:
 
 ```export DBNAME=taketwodatabase```
@@ -149,14 +122,15 @@ Run the Python api code:
 
 ## Deploy to Kubernetes
 
-There is already an [image](https://hub.docker.com/repository/docker/josiemundi/taketwo_v0.1) available in Docker hub for this API, which you can use to deploy to a Kubernetes cluster. Alternatively, you can build your own using the Dockerfile in this repo. 
+There is already an [image](https://hub.docker.com/repository/docker/josiemundi/taketwo_v0.1) available in Docker Hub for this API, which you can use to deploy to a Kubernetes cluster. Alternatively, you can build your own using the Dockerfile in this repo.
 
 To build a new image, run the following command in a terminal window:
 
 ```docker build -t <dockerusername>/taketwo_api .```
 
-To push the image to Docker hub, run the following:
+To push the image to Docker Hub, run the following:
 
+```docker login```
 ```docker push <dockerusername>/taketwo_api```
 
 </br>
@@ -178,6 +152,8 @@ For an overview of the available endpoints, navigate to [http://localhost:8000/d
 ![TakeTwo Swagger Doc](images/api-swaggerdoc.png)
 
 ## Summary
+
+Once the TakeTwo database and Python service is running, the TakeTwo endpoints can be called to get, save, delete, update data in the database. New text can be analyzed for potentially racially biased terminology.
 
 ## Related Links
 

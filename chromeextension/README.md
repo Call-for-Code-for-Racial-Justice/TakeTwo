@@ -1,6 +1,6 @@
 # TakeTwo Solution Starter - Chrome Extension
 
-The TakeTwo Chrome browser extension is part of the Call For Code TakeTwo Project. The extension is a plugin to facilitate the capture and categorization of words and phrases that could be racially biased through a browser.
+The TakeTwo Chrome browser extension is part of the Call for Code for Racial Justice TakeTwo Project. The extension is a plugin to facilitate the capture and categorization of words and phrases that could be racially biased through a browser.
 
 The TakeTwo Chrome javascript extension uses the [Highlighter chrome extension](https://github.com/jeromepl/highlighter) library to allow the highlighter functionality for selecting text.
 
