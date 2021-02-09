@@ -75,9 +75,9 @@ This API is underpinned by a crowd-sourced database of words and phrases that ar
 
 There are a number of other repositories related to this project:
 
-- [TakeTwo Web API](webapi/README.md) - Contains the Python app, FastAPI and database schema.
-- [TakeTwo Data Science](datascience/README.md) - Contains data science work for building and training the model.
-- [TakeTwo Marker Chrome Extenstion](chromeextension/README.md) - Code for the Chrome extension used to crowdsource data for training the ML model.
+- [TakeTwo Web API](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-webapi) - Contains the Python app, FastAPI and database schema.
+- [TakeTwo Data Science](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-datascience) - Contains data science work for building and training the model.
+- [TakeTwo Marker Chrome Extenstion](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-marker-chromeextension) - Code for the Chrome extension used to crowdsource data for training the ML model.
 
 
 ## Technology
@@ -123,11 +123,9 @@ This project has defined a number of data scheme categories of racial bias, whic
 #### TakeTwo Web Backend API
 
 The Web API is built in Python and handles the following:
-- Captures the data crowdsourced by contributors through the [TakeTwo Chrome extension tool](chromeextension/README.md).
-- Captures the data highlighted by contributors and posts it to a backend database. Separately, this data will be used to train a [ML model](datascience/README.md) that can detect racial bias.
+- Captures the data crowdsourced by contributors through the [TakeTwo Chrome extension tool](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-marker-chromeextension).
+- Captures the data highlighted by contributors and posts it to a backend database. Separately, this data will be used to train a [ML model](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-datascience) that can detect racial bias.
 - Fetches the defined categories of racial bias and serves them in the extension tool.
-
-[Follow these instructions for setting up the web back end API](webapi/README.md)
 
 #### TakeTwo Browser Extension
 
@@ -137,15 +135,12 @@ The TakeTwo Chrome browser extension is a plugin to facilitate the capture and c
 
 This extension is used to enable the crowdsourcing of data for use in training an ML model. This extension aims to make it as easy as possible for community members who would like to contribute to this initiative to do so quickly and privately.
 
-[Follow these instructions for installing the Chrome Extension](chromeextension/README.md)
-
 #### TakeTwo Data Science
 
-The TakeTwo Data Science workstream uses data crowdsourced by a [Chrome extension](chromeextension/README.md). The data is sent to a [backend database](webapi/README.md).
+The TakeTwo Data Science workstream uses data crowdsourced by a [Chrome extension](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-marker-chromeextension). The data is sent to a [backend database](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-webapi).
 
 The machine learning model code is written in Python and runs in a Jupyter notebook.
 
-[Follow these instructions for building a machine learning model to predict whether a word or phrase contains racial bias.](datascience/README.md)
 
 ## Steps
 
