@@ -149,7 +149,7 @@ The machine learning model code is written in Python and runs in a Jupyter noteb
 
 ## Steps
 
-To build and use the TakeTwo API:
+To build and use the TakeTwo solution:
 
 1. Get started by cloning the [TakeTwo web API repository](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-webapi), and follow the instructions to build and run the FastAPI server.
    
