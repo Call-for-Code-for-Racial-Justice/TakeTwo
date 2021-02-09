@@ -1,9 +1,0 @@
-[submodule "taketwo-datascience"]
-	path = taketwo-datascience
-	url = https://github.com/Call-for-Code-for-Racial-Justice/taketwo-datascience
-[submodule "taketwo-webapi"]
-	path = taketwo-webapi
-	url = https://github.com/Call-for-Code-for-Racial-Justice/taketwo-webapi
-[submodule "taketwo-marker-chromeextension"]
-	path = taketwo-marker-chromeextension
-	url = https://github.com/Call-for-Code-for-Racial-Justice/taketwo-marker-chromeextension

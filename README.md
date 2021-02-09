@@ -8,12 +8,11 @@ TakeTwo provides a quick and simple tool to help detect and eliminate racial bia
 3. [The idea](#the-idea)
 4. [How it works](#how-it-works)
 5. [Diagrams](#diagrams)
-6. [Documents](#documents)
-7. [Datasets](#datasets)
-8. [Technology](#technology)
-9. [Getting started](#getting-started)
-10. [Disclosures](#disclosures)
-11. [License](#license)
+6. [Datasets](#datasets)
+7. [Technology](#technology)
+8. [Getting started](#getting-started)
+9.  [Disclosures](#disclosures)
+10. [License](#license)
 
 ![TakeTwo logo](images/logoblack.png)
 
@@ -95,14 +94,14 @@ There is a front-end HTML page that serves as an example text editor.
 
 ### TakeTwo Architecture
 
-![](images/architecture-overview.png)
+![](images/architecture-overview-tutorial.png)
 
-1. The Chrome extension provides two features: (1) scan and highlight text that could contain racially biased terms and (2) explain to the writer the racial biased categories.
-1. Allows an approved expert to mark text and tag racially biased terms
-1. Submit this information via the Python TakeTwo api
-1. TakeTwo API writes data to the backend database.
-1. ML model reads data from the database to train and refine model.
-1. Client app sends content as a request to the model and model responds by flagging any text that could contain racially biased terms.
+1. The Chrome extension enables an authenticated user to highlight content on the fly within their browser and categorize it as racially biased.
+2. An authenticated user can mark text and tag racially biased terms.
+3. The information is submitted to the TakeTwo API.
+4. The TakeTwo API writes data to the back-end database.
+5. The machine learning model reads data from the database to train and refine the model.
+6. The client app sends the content as a request to the model, and the model responds by flagging any text that could contain racially biased terms.
 
 </br>
 
@@ -148,6 +147,21 @@ The machine learning model code is written in Python and runs in a Jupyter noteb
 
 [Follow these instructions for building a machine learning model to predict whether a word or phrase contains racial bias.](datascience/README.md)
 
+## Steps
+
+To build and use the TakeTwo solution:
+
+1. Get started by cloning the [TakeTwo web API repository](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-webapi), and follow the instructions to build and run the FastAPI server.
+   
+   ![FastAPI Swagger Docs](images/fastapi-swagger-finished.jpg)
+
+2. Next, clone  the [TakeTwo chrome extension repository](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-marker-chromeextension), and follow the instructions to build the chrome extension.
+   
+   ![Chrome Extension](images/extension-finished.jpg)
+
+3. Finally, explore the [TakeTwo data science workstream repository](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-datascience), to learn more about the data science model.
+
+
 ## Contributing
 
 We welcome contributions! For details on how to contribute, please read the [CONTRIBUTING](CONTRIBUTING.md) file in this repo.
@@ -168,10 +182,6 @@ We hope you will help us in this open source community effort!
 - Lead Developer: Johanna Saladas
 - Architect: Steve Uniack
 - Offering Manager: Iain McCombe
-
-## Documents
-
-[Media Representations Impact Black Men](https://www.opportunityagenda.org/explore/resources-publications/media-representations-impact-black-men/media-portrayals)
 
 ## Disclosures
 
