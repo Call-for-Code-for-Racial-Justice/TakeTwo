@@ -8,12 +8,11 @@ TakeTwo provides a quick and simple tool to help detect and eliminate racial bia
 3. [The idea](#the-idea)
 4. [How it works](#how-it-works)
 5. [Diagrams](#diagrams)
-6. [Documents](#documents)
-7. [Datasets](#datasets)
-8. [Technology](#technology)
-9. [Getting started](#getting-started)
-10. [Disclosures](#disclosures)
-11. [License](#license)
+6. [Datasets](#datasets)
+7. [Technology](#technology)
+8. [Getting started](#getting-started)
+9.  [Disclosures](#disclosures)
+10. [License](#license)
 
 ![TakeTwo logo](images/logoblack.png)
 
@@ -183,10 +182,6 @@ We hope you will help us in this open source community effort!
 - Lead Developer: Johanna Saladas
 - Architect: Steve Uniack
 - Offering Manager: Iain McCombe
-
-## Documents
-
-[Media Representations Impact Black Men](https://www.opportunityagenda.org/explore/resources-publications/media-representations-impact-black-men/media-portrayals)
 
 ## Disclosures
 
