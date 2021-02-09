@@ -95,14 +95,14 @@ There is a front-end HTML page that serves as an example text editor.
 
 ### TakeTwo Architecture
 
-![](images/architecture-overview.png)
+![](images/architecture-overview-tutorial.png)
 
-1. The Chrome extension provides two features: (1) scan and highlight text that could contain racially biased terms and (2) explain to the writer the racial biased categories.
-1. Allows an approved expert to mark text and tag racially biased terms
-1. Submit this information via the Python TakeTwo api
-1. TakeTwo API writes data to the backend database.
-1. ML model reads data from the database to train and refine model.
-1. Client app sends content as a request to the model and model responds by flagging any text that could contain racially biased terms.
+1. The Chrome extension enables an authenticated user to highlight content on the fly within their browser and categorize it as racially biased.
+2. An authenticated user can mark text and tag racially biased terms.
+3. The information is submitted to the TakeTwo API.
+4. The TakeTwo API writes data to the back-end database.
+5. The machine learning model reads data from the database to train and refine the model.
+6. The client app sends the content as a request to the model, and the model responds by flagging any text that could contain racially biased terms.
 
 </br>
 
@@ -147,6 +147,21 @@ The TakeTwo Data Science workstream uses data crowdsourced by a [Chrome extensio
 The machine learning model code is written in Python and runs in a Jupyter notebook.
 
 [Follow these instructions for building a machine learning model to predict whether a word or phrase contains racial bias.](datascience/README.md)
+
+## Steps
+
+To build and use the TakeTwo API:
+
+1. Get started by cloning the [TakeTwo web API repository](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-webapi), and follow the instructions to build and run the FastAPI server.
+   
+   ![FastAPI Swagger Docs](images/fastapi-swagger-finished.jpg)
+
+2. Next, clone  the [TakeTwo chrome extension repository](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-marker-chromeextension), and follow the instructions to build the chrome extension.
+   
+   ![Chrome Extension](images/extension-finished.jpg)
+
+3. Finally, explore the [TakeTwo data science workstream repository](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-datascience), to learn more about the data science model.
+
 
 ## Contributing
 
