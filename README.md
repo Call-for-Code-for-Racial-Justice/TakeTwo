@@ -1,5 +1,6 @@
 # TakeTwo Solution Starter
-TakeTwo provides a quick and simple tool to help detect and eliminate racial bias -- both overt and subtle -- in written content. Using TakeTwo to detect phrases and words that can be seen as racially biased can assist content creators in proactively mitigating potential bias as they write. It can also be used to review written content on websites and social media for potential biases.
+
+TakeTwo aims to help mitigate bias in digital content, whether it is overt or subtle, with a focus on text across news articles, headlines, web pages, blogs, and even code. The solution is designed to leverage directories of inclusive terms compiled by trusted sources like the [Inclusive Naming Initiative](https://inclusivenaming.org/), which was co-founded by the Linux Foundation and CNCF. The terminology is categorized to train an AI model to enhance its accuracy overtime. TakeTwo is built using open source technologies including Python, FastAPI and Docker. The API can be run locally with a CouchDB backend database or IBM Cloudant database.
 
 ## Contents
 
@@ -11,7 +12,7 @@ TakeTwo provides a quick and simple tool to help detect and eliminate racial bia
 6. [Datasets](#datasets)
 7. [Technology](#technology)
 8. [Getting started](#getting-started)
-9.  [Disclosures](#disclosures)
+9. [Disclosures](#disclosures)
 10. [License](#license)
 
 ![TakeTwo logo](images/logoblack.png)
@@ -52,8 +53,7 @@ This project aims to facilitate **content platforms** to:
 
 ## Video
 
-- 
-
+-
 
 ## The Idea
 
@@ -62,10 +62,12 @@ The TakeTwo solution provides a quick and simple tool for **content platforms** 
 ## How it Works
 
 ### What is TakeTwo?
+
 TakeTwo is an API that can be used while you compose social media text, paragraphs, essays, and papers. TakeTwo will scan for potentially racially biased language. The API works by flagging and classifying phrases and words that have a tendency of being perceived as racially biased within the United States. These phrases and words are then catagorized by [common types of detectable racially biased language](#datasets).
 
 ### How does TakeTwo work?
-TakeTwo leverages a crowd-sourced database of words and phrases that could be viewed as racially biased in the US. Verified, trusted contributors can use TakeTwo's browser extension to select potentially biased language in text-based media. These selections are classified under commonly detected types of racially biased language to train TakeTwo's text-classification machine learning model.  
+
+TakeTwo leverages a crowd-sourced database of words and phrases that could be viewed as racially biased in the US. Verified, trusted contributors can use TakeTwo's browser extension to select potentially biased language in text-based media. These selections are classified under commonly detected types of racially biased language to train TakeTwo's text-classification machine learning model.
 
 TakeTwo's machine learning model is used to help identify subtle, context-dependent phrases or words that may be perceived as racially biased in the United States.
 
@@ -78,7 +80,6 @@ There are a number of other repositories related to this project:
 - [TakeTwo Web API](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-webapi/) - Contains the Python app, FastAPI and database schema.
 - [TakeTwo Data Science](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-datascience/) - Contains data science work for building and training the model.
 - [TakeTwo Marker Chrome Extenstion](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-marker-chromeextension/) - Code for the Chrome extension used to crowdsource data for training the ML model.
-
 
 ## Technology
 
@@ -94,7 +95,7 @@ There is a front-end HTML page that serves as an example text editor.
 
 ### TakeTwo Architecture
 
-![](images/architecture-overview-tutorial.png)
+![TakeTwo architecture diagram](images/architecture-overview-tutorial.png)
 
 1. The Chrome extension enables an authenticated user to highlight content on the fly within their browser and categorize it as racially biased.
 2. An authenticated user can mark text and tag racially biased terms.
@@ -123,6 +124,7 @@ This project has defined a number of data scheme categories of racial bias, whic
 #### TakeTwo Web Backend API
 
 The Web API is built in Python and handles the following:
+
 - Captures the data crowdsourced by contributors through the [TakeTwo Chrome extension tool](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-marker-chromeextension/blob/main/README.md).
 - Captures the data highlighted by contributors and posts it to a backend database. Separately, this data will be used to train a [ML model](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-datascience/blob/main/README.md) that can detect racial bias.
 - Fetches the defined categories of racial bias and serves them in the extension tool.
@@ -152,15 +154,14 @@ The machine learning model code is written in Python and runs in a Jupyter noteb
 To build and use the TakeTwo solution:
 
 1. Get started by cloning the [TakeTwo web API repository](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-webapi), and follow the instructions to build and run the FastAPI server.
-   
+
    ![FastAPI Swagger Docs](images/fastapi-swagger-finished.jpg)
 
 2. Next, clone the [TakeTwo chrome extension repository](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-marker-chromeextension), and follow the instructions to build the chrome extension.
-   
+
    ![Chrome Extension](images/extension-finished.jpg)
 
 3. Finally, explore the [TakeTwo data science workstream repository](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-datascience), to learn more about the data science model.
-
 
 ## Contributing
 
@@ -187,4 +188,4 @@ We hope you will help us in this open source community effort!
 
 ## License
 
-This solution starter is made available under the [MIT License](LICENSE).
+This solution starter is made available under the [Apache 2 License](LICENSE).
