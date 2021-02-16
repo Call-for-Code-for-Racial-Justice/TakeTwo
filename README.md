@@ -116,7 +116,7 @@ This project has defined a number of data scheme categories of racial bias, whic
 - **Stereotyping:** To perpetuate a system of beliefs about superficial characteristics of members of a given ethnic group or nationality, their status, society and cultural norms.
 - **Under-Representation:** To have insufficient or disproportionately low representation of Black, Indigenous, People of Color (BIPOC) individuals, for example in mediums such as media and TV adverts.
 - **Gaslighting:** To use tactics, whether by a person or entity, in order to gain more power by making a victim question their reality.  To deny or refuse to see racial bias, which may also include the act of convincing a person that an event, slur, or idea is not racist or not as bad as one claims it to be through means of psychological manipulation.
-- **Racial Slur:** To insult, or use offensive or hurtful language designed to degrade a person because of their race or culture. This is intentional use of words or phrases to speak of or to members of ethnic groups in a derogatory manor.
+- **Racial Slur:** To insult, or use offensive or hurtful language designed to degrade a person because of their race or culture. This is intentional use of words or phrases to speak of or to members of ethnic groups in a derogatory manner.
 - **Othering:** To label and define a person or group as someone who belongs to a "socially subordinate" category of society. The practice of othering persons means to use the characteristics of a person's race to exclude and displace such person from the 'superior' social group and separate them from what is classed as normal.
 
 ## Getting started
@@ -133,7 +133,7 @@ The Web API is built in Python and handles the following:
 
 #### TakeTwo Browser Extension
 
-The TakeTwo Chrome javascript extension uses the [Highlighter chrome extension](https://github.com/jeromepl/highlighter) library to allow the highlighter functionality for selecting text.
+The TakeTwo Chrome javascript extension uses the [Highlighter Chrome extension](https://github.com/jeromepl/highlighter) library to allow the highlighter functionality for selecting text.
 
 The TakeTwo Chrome browser extension is a plugin to facilitate the capture and categorization words and phrases that could be racially biased through a browser. The words and phrases can be categorized.
 
@@ -157,11 +157,11 @@ To build and use the TakeTwo solution:
 
    ![FastAPI Swagger Docs](images/fastapi-swagger-finished.jpg)
 
-2. Next, clone the [TakeTwo chrome extension repository](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-marker-chromeextension), and follow the instructions to build the chrome extension.
+2. Next, clone the [TakeTwo Chrome extension repository](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-marker-chromeextension), and follow the instructions to build the Chrome extension.
 
    ![Chrome Extension](images/extension-finished.jpg)
 
-3. Finally, explore the [TakeTwo data science workstream repository](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-datascience), to learn more about the data science model.
+3. Finally, explore the [TakeTwo data science workstream repository](https://github.com/Call-for-Code-for-Racial-Justice/taketwo-datascience) to learn more about the data science model.
 
 ## Contributing
 
