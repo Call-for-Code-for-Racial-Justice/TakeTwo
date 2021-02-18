@@ -95,7 +95,7 @@ There is a front-end HTML page that serves as an example text editor.
 
 ### TakeTwo Architecture
 
-![TakeTwo architecture diagram](images/architecture-overview-tutorial.png)
+![TakeTwo architecture diagram](images/taketwo-architecture.png)
 
 1. The Chrome extension enables an authenticated user to highlight content on the fly within their browser and categorize it as racially biased.
 2. An authenticated user can mark text and tag racially biased terms.
