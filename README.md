@@ -53,7 +53,7 @@ This project aims to facilitate **content platforms** to:
 
 ## Video
 
--
+[![Video Call for Code for Racial Justice Solution Starter: TakeTwo](https://img.youtube.com/vi/ZYaW7vxj3Ck/0.jpg)](https://www.youtube.com/watch?v=ZYaW7vxj3Ck)
 
 ## The Idea
 
