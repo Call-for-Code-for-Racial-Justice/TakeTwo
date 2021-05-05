@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Community](https://img.shields.io/badge/Join-Community-blue.svg)](https://developer.ibm.com/callforcode/racial-justice/get-started/)
+
 # TakeTwo Solution Starter
 
 TakeTwo aims to help mitigate bias in digital content, whether it is overt or subtle, with a focus on text across news articles, headlines, web pages, blogs, and even code. The solution is designed to leverage directories of inclusive terms compiled by trusted sources like the [Inclusive Naming Initiative](https://inclusivenaming.org/), which was co-founded by the Linux Foundation and CNCF. The terminology is categorized to train an AI model to enhance its accuracy overtime. TakeTwo is built using open source technologies including Python, FastAPI and Docker. The API can be run locally with a CouchDB backend database or IBM Cloudant database.
